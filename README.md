@@ -1,0 +1,4 @@
+# my dotfiles
+
+- tmux
+- bash
