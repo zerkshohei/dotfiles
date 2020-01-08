@@ -1,0 +1,25 @@
+# 最初にすべての階層のファイルを無視します
+# 階層は必要なだけ追加する
+### all ignore ###
+/*
+/.**
+!README.md
+!.gitignore
+
+# minimum
+!.vimrc
+
+!.ideavimrc
+
+!.bash_profile
+!.bashrc
+!.tmux.conf
+!Brewfile
+
+!/.config/
+!/.config/nvim
+!/.config/nvim/*
+
+!/.dein/
+!/.dein/**
+
