@@ -3,8 +3,6 @@
 ### all ignore ###
 /*
 /.**
-!README.md
-!.gitignore
 
 # minimum
 !.vimrc
@@ -26,3 +24,7 @@
 !/.vifm/
 !/.vifm/vifmrc
 
+
+!README.md
+!.gitignore
+!.gitkeep
