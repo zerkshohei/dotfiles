@@ -17,3 +17,6 @@ alias ..3='cd ../../..'
 
 alias here="open_with_nv"
 
+export LANG=ja_JP.UTF-8
+# for docui option
+export LC_CTYPE=en_US.UTF-8
