@@ -17,6 +17,8 @@
 !/.config/
 !/.config/nvim
 !/.config/nvim/*
+!/.config/alacritty
+!/.config/alacritty/*
 
 !/.dein/
 !/.dein/**
