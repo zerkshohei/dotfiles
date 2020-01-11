@@ -180,42 +180,44 @@ font:
   #use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-#draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: true
 
-# Colors (Oceanic Next)
-colors:
-  # Default colors
-  primary:
-    background: '0x1b2b34'
-    foreground: '0xd8dee9'
+schemas:
+  # Colors (Oceanic Next)
+  oceanicnext: &oceanicnext
+    # Default colors
+    primary:
+      background: '0x1b2b34'
+      foreground: '0xd8dee9'
 
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: '0x1b2b34'
-    cursor: '0xEC5f67'
+    # Colors the cursor will use if `custom_cursor_colors` is true
+    cursor:
+      text: '0x1b2b34'
+      cursor: '0xEC5f67'
 
-  # Normal colors
-  normal:
-    black:   '0x343d46'
-    red:     '0xEC5f67'
-    green:   '0x99C794'
-    yellow:  '0xFAC863'
-    blue:    '0x6699cc'
-    magenta: '0xc594c5'
-    cyan:    '0x5fb3b3'
-    white:   '0xd8dee9'
+    # Normal colors
+    normal:
+      black:   '0x343d46'
+      red:     '0xEC5f67'
+      green:   '0x99C794'
+      yellow:  '0xFAC863'
+      blue:    '0x6699cc'
+      magenta: '0xc594c5'
+      cyan:    '0x5fb3b3'
+      white:   '0xd8dee9'
 
-  # Bright colors
-  bright:
-    black:   '0x343d46'
-    red:     '0xEC5f67'
-    green:   '0x99C794'
-    yellow:  '0xFAC863'
-    blue:    '0x6699cc'
-    magenta: '0xc594c5'
-    cyan:    '0x5fb3b3'
-    white:   '0xd8dee9'
+    # Bright colors 自動計算させる
+    #bright:
+    #  black:   '0x343d46'
+    #  red:     '0xEC5f67'
+    #  green:   '0x99C794'
+    #  yellow:  '0xFAC863'
+    #  blue:    '0x6699cc'
+    #  magenta: '0xc594c5'
+    #  cyan:    '0x5fb3b3'
+    #  white:   '0xd8dee9'
 
+colors: *oceanicnext
 
 # Visual Bell
 #
