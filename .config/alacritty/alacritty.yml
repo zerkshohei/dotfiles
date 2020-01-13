@@ -152,9 +152,9 @@ font:
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
-  #offset:
-  #  x: 0
-  #  y: 0
+  offset:
+    x: 0
+    y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
@@ -177,7 +177,7 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  #use_thin_strokes: true
+  use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
@@ -187,36 +187,39 @@ schemas:
   oceanicnext: &oceanicnext
     # Default colors
     primary:
-      background: '0x1b2b34'
-      foreground: '0xd8dee9'
+      background: '0x243238'
+      foreground: '0xcdd2de'
 
     # Colors the cursor will use if `custom_cursor_colors` is true
     cursor:
-      text: '0x1b2b34'
-      cursor: '0xEC5f67'
+      text: '0xfeffff'
+      cursor: '0xc0c4ce'
+
+    selection:
+      text: '0xcdd2de'
+      background: '0x7dcbc4'
 
     # Normal colors
     normal:
-      black:   '0x343d46'
-      red:     '0xEC5f67'
-      green:   '0x99C794'
-      yellow:  '0xFAC863'
-      blue:    '0x6699cc'
-      magenta: '0xc594c5'
-      cyan:    '0x5fb3b3'
-      white:   '0xd8dee9'
+      black:   '0x000000'
+      red:     '0xf44235'
+      green:   '0x4cae4f'
+      yellow:  '0xffea3a'
+      blue:    '0x2196f2'
+      magenta: '0x9b27af'
+      cyan:    '0x00bcd4'
+      white:   '0xb3b3b3'
 
     # Bright colors 自動計算させる
-    #bright:
-    #  black:   '0x343d46'
-    #  red:     '0xEC5f67'
-    #  green:   '0x99C794'
-    #  yellow:  '0xFAC863'
-    #  blue:    '0x6699cc'
-    #  magenta: '0xc594c5'
-    #  cyan:    '0x5fb3b3'
-    #  white:   '0xd8dee9'
-
+    bright:
+      black:   '0x898989'
+      red:     '0xe57272'
+      green:   '0x81c783'
+      yellow:  '0xfff175'
+      blue:    '0x64b5f6'
+      magenta: '0xc594c5'
+      cyan:    '0x4dd0e1'
+      white:   '0xfefefe'
 colors: *oceanicnext
 
 # Visual Bell
@@ -306,7 +309,7 @@ background_opacity: 1.0
 #winpty_backend: false
 
 # Send ESC (\x1b) before characters when alt is pressed.
-#alt_send_esc: true
+alt_send_esc: true
 
 #debug:
   # Display the time it takes to redraw each frame.
