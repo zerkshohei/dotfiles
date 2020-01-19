@@ -20,8 +20,6 @@ hook_add = '''
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 
-[[plugins]]
-repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
@@ -29,21 +27,26 @@ repo = 'Yggdroot/indentLine'
 [[plugins]]
 repo = 'kana/vim-operator-user'
 
-
 [[plugins]]
 repo = "airblade/vim-gitgutter"
 
 [[plugins]]
 repo = "tpope/vim-fugitive"
-hook_add =
-'''
-    set statusline+=%{fugitive#statusline()}
-'''
 
 [[plugins]]
-repo = 'mhartington/oceanic-next'
+repo = 'itchyny/lightline.vim'
+depends = 'tpope/vim-fugitive'
 hook_add = '''
-    colorscheme OceanicNext
+let g:lightline = {
+  \'active': {
+  \  'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+  \  },
+  \  'component_function': {
+  \    'gitbranch': 'fugitive#head',
+  \   },
+  \   }
+set laststatus=2
+set noshowmode
 '''
 
 #coc系を入れてみる
@@ -52,8 +55,11 @@ repo = 'neoclide/coc.nvim'
 rev = 'release'
 merge = 0
 hook_add = '''
-    source ~/.config/nvim/coc.vim
+  source ~/.config/nvim/coc.vim
 '''
+
+[[plugins]]
+repo = 'mhartington/oceanic-next'
 
 #fzf brewのものを使用する。
 [[plugins]]

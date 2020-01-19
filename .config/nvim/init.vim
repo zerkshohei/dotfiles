@@ -29,6 +29,7 @@ if dein#check_install()
     call dein#install()
 endif
 
+colorscheme OceanicNext
 
 " Or if you have Neovim >= 0.1.5
 if (has("termguicolors"))
@@ -84,11 +85,7 @@ endif
 set clipboard=unnamed
 
 "ステータスライン関連
-set laststatus=2
 set showcmd
-" pluginで表示するためいらない
-"set showmode
-set noshowmode
 set ruler
 
 "NERDTree関連
