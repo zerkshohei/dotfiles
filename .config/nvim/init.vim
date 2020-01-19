@@ -97,8 +97,5 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 inoremap <silent> jj <ESC>
 inoremap <silent> っｊ <ESC>
 
-colorscheme OceanicNext
-
-
 
 

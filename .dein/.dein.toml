@@ -11,8 +11,11 @@ let g:polyglot_disabled = ['markdown', 'tsx', 'typescript', 'csv', 'dockerfile']
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
-# [[plugins]]
-# repo = 'Shougo/neosnippet-snippets'
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+hook_add = '''
+  let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+'''
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
@@ -23,26 +26,16 @@ repo = 'itchyny/lightline.vim'
 [[plugins]]
 repo = 'Yggdroot/indentLine'
 
-# autopairは邪魔かも
-# [[plugins]]
-# repo = 'jiangmiao/auto-pairs'
-
 [[plugins]]
 repo = 'kana/vim-operator-user'
 
-# formatterは、googleに変更する
-#[[plugins]]
-#repo = 'rhysd/vim-clang-format'
-# autoformattも一旦外してみる
-# [[plugins]]
-# repo = 'Chiel92/vim-autoformat'
 
 [[plugins]]
 repo = "airblade/vim-gitgutter"
 
 [[plugins]]
 repo = "tpope/vim-fugitive"
-hook_add = 
+hook_add =
 '''
     set statusline+=%{fugitive#statusline()}
 '''
@@ -50,9 +43,8 @@ hook_add =
 [[plugins]]
 repo = 'mhartington/oceanic-next'
 hook_add = '''
-colorscheme OceanicNext
+    colorscheme OceanicNext
 '''
-
 
 #coc系を入れてみる
 [[plugins]]
@@ -60,19 +52,13 @@ repo = 'neoclide/coc.nvim'
 rev = 'release'
 merge = 0
 hook_add = '''
-source ~/.config/nvim/coc.vim
+    source ~/.config/nvim/coc.vim
 '''
 
+#fzf brewのものを使用する。
 [[plugins]]
 repo = '/usr/local/opt/fzf'
-
-#fzf
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
-
-
-## 重たそうだから一旦使わない
-## [[plugins]]
-## repo = 'unblevable/quick-scope'
 
