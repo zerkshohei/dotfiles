@@ -15,6 +15,8 @@ alias la='ls -a --color=auto'
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
 
+alias gf='cd $(ghq list -p | fzf)'
+
 alias here="open_with_nv"
 
 export LANG=ja_JP.UTF-8
